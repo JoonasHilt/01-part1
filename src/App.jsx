@@ -22,6 +22,10 @@ const Footer = () => {
 const App = () => {
   const nimi = "Pekka";
   const ika = 10;
+  const friends = [
+    { name: "Levvi", age: 4 },
+    { name: "Venla", age: 10 },
+  ];
   //palauttaa komponentit//
   return (
     <div>
@@ -29,6 +33,12 @@ const App = () => {
       <Hello name="Maya" age={26 + 10} />
       <Hello name={nimi} age={ika} />
       <Footer />
+      <p>
+        {friends[0].name} {friends[0].age}
+      </p>
+      <p>
+        {friends[1].name} {friends[1].age}
+      </p>
     </div>
   );
 };
