@@ -2,6 +2,8 @@ const Hello = ({ name, age }) => {
   const bornYear = () => new Date().getFullYear() - age;
   console.log(name, age);
 
+  /* HOX, JATKA ENSIKERALLA --C OSA _ KOMPONENTIN TILA JA TAPAHTUMAKÄSITTELY, Destrukturointi!!  */
+
   return (
     <div>
       <p>
