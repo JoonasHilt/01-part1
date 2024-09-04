@@ -32,13 +32,13 @@ const App = () => {
       <h1>Greetings</h1>
       <Hello name="Maya" age={26 + 10} />
       <Hello name={nimi} age={ika} />
-      <Footer />
       <p>
         {friends[0].name} {friends[0].age}
       </p>
       <p>
         {friends[1].name} {friends[1].age}
       </p>
+      <Footer />
     </div>
   );
 };
