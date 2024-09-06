@@ -29,7 +29,10 @@ const Footer = () => {
 const App = () => {
   // counter alkaa
   const [counter, setCounter] = useState(0);
-  setTimeout(() => setCounter(counter + 1), 1000);
+  console.log("Counter is now at", counter);
+  //nappien tapahtuma käsittelijät
+  const increaseByOne = () => setCounter(counter + 1);
+  const setToZero = () => setCounter(0);
   // counter loppuu
   const nimi = "Pekka";
   const ika = 10;
@@ -50,7 +53,8 @@ const App = () => {
         {friends[1].name} {friends[1].age}
       </p>
       <div>{counter} LASKURI</div>
-
+      <button onClick={increaseByOne}>PLUS</button>
+      <button onClick={setToZero}>ZERO</button>
       <Footer />
     </div>
   );
