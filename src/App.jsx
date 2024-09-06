@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Hello = ({ name, age }) => {
   const bornYear = () => new Date().getFullYear() - age;
   console.log(name, age);
@@ -25,6 +27,10 @@ const Footer = () => {
 
 //----//
 const App = () => {
+  // counter alkaa
+  const [counter, setCounter] = useState(0);
+  setTimeout(() => setCounter(counter + 1), 1000);
+  // counter loppuu
   const nimi = "Pekka";
   const ika = 10;
   const friends = [
@@ -43,6 +49,8 @@ const App = () => {
       <p>
         {friends[1].name} {friends[1].age}
       </p>
+      <div>{counter} LASKURI</div>
+
       <Footer />
     </div>
   );
