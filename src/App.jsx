@@ -24,7 +24,14 @@ const Footer = () => {
     </div>
   );
 };
-
+//Display komponentti
+const Display = (props) => {
+  return <div>{props.counter}</div>;
+};
+//Button komponentti
+const Button = (props) => {
+  return <button onClick={props.handleClick}>{props.text}</button>;
+};
 //----//
 const App = () => {
   // counter alkaa
@@ -32,6 +39,7 @@ const App = () => {
   console.log("Counter is now at", counter);
   //nappien tapahtuma käsittelijät
   const increaseByOne = () => setCounter(counter + 1);
+  const decreaseByOne = () => setCounter(counter - 1);
   const setToZero = () => setCounter(0);
   // counter loppuu
   const nimi = "Pekka";
@@ -52,9 +60,11 @@ const App = () => {
       <p>
         {friends[1].name} {friends[1].age}
       </p>
-      <div>{counter} LASKURI</div>
-      <button onClick={increaseByOne}>PLUS</button>
-      <button onClick={setToZero}>ZERO</button>
+      <Display counter={counter} />
+      <Button handleClick={increaseByOne} text="Plus" />
+      <Button handleClick={decreaseByOne} text="Minus" />
+      <Button handleClick={setToZero} text="Zero" />
+
       <Footer />
     </div>
   );
