@@ -36,11 +36,18 @@ const Button = (props) => {
 const App = () => {
   // counter alkaa
   const [counter, setCounter] = useState(0);
-  console.log("Counter is now at", counter);
+  console.log("Rendering with counter value", counter);
   //nappien tapahtuma käsittelijät
-  const increaseByOne = () => setCounter(counter + 1);
-  const decreaseByOne = () => setCounter(counter - 1);
-  const setToZero = () => setCounter(0);
+  const increaseByOne = () => {
+    console.log("increasin value before", counter), setCounter(counter + 1);
+  };
+  const decreaseByOne = () => {
+    console.log("decreasing value before"), setCounter(counter - 1);
+  };
+  const setToZero = () => {
+    console.log("resetting to zero, value before"), setCounter(0);
+  };
+
   // counter loppuu
   const nimi = "Pekka";
   const ika = 10;
